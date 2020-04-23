@@ -1,0 +1,34 @@
+{
+    "name": "OCaml Container",
+    "dockerFile": "Dockerfile",
+
+    // Use 'settings' to set *default* container specific settings.json values on container create. 
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "files.associations": {
+            "*.ml": "ocaml",
+            "*.mli": "ocaml"
+        },
+        "ocaml": {
+            "lintOnChange": "y",
+            "lintOnSave": "y"
+        }
+    },
+
+    // Add the IDs of extensions you want installed when the container is created in the array below.
+    "extensions": [
+        "hackwaly.ocaml",
+        "badochov.ocaml-formatter",
+        
+    ],
+    
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [3000],
+
+    // Specifies a command that should be run after the container has been created.
+    "postCreateCommand": "opam init -a",
+        
+    // Comment out the next line to run as root instead.
+    "remoteUser": "opam"
+
+}
