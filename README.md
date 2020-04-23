@@ -2,7 +2,14 @@
 
 This is a sample project that lets you try out the **[VS Code Remote - Containers](https://aka.ms/vscode-remote/containers)** extension in a few easy steps.
 
-> **Note:** If you're following the quick start, you can jump to the [Things to try](#things-to-try) section.
+## CURRENT BUGS
+
+- _Launch.json_ and _tasks.json_ are there but buggy, launching the program
+   via F5 leads to an error as
+- `eval $(opam env)` needs to be called for every new terminal
+- Therefore, manual compilation/running via a integrated terminal is
+   needed for now
+
 
 ## Setting up the development container
 

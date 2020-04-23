@@ -35,9 +35,8 @@ RUN sudo apt-get update \
     && sudo apt-get clean -y \
     && sudo rm -rf /var/lib/apt/lists/*
 
-#USER ${USERNAME}
+
 RUN opam update -y \
-    #opam depext conf-m4.1
     && opam depext merlin \
     && opam depext ocp-indent \
     && opam depext ocamlformat \
@@ -45,4 +44,7 @@ RUN opam update -y \
     && opam install -y ocp-indent \
     && opam install -y ocamlformat
 
- ENV DEBIAN_FRONTEND=dialog
+USER ${USERNAME}
+RUN opam init -a
+
+ENV DEBIAN_FRONTEND=dialog
