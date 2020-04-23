@@ -31,9 +31,10 @@ Once you have this sample opened in a container, you'll be able to work with it 
 Some things to try:
 
 1. **Edit:**
-   - Open `server.js`
+   - Open `main.ml`
    - Try adding some code and check out the language features. 
 2. **Terminal:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>\`</kbd> and type `uname` and other Linux commands from the terminal window.
+   - Source your ocaml installation via `eval $(opam env)`
 
 ## License
 
